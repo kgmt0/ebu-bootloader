@@ -30,7 +30,7 @@ jobs:
         git -c protocol.version=2 submodule update --init --force --depth=1
 
     - name: Build
-      run: make
+      run: make CLOCKSPRESET=CPU_1000_DDR_800 UBOOT_CONFIG=mvebu_espressobin-88f3720_defconfig
 
     - name: Save image to artifacts
       uses: actions/upload-artifact@v4
